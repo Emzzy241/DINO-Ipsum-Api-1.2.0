@@ -11,9 +11,19 @@ import "./css/styles.css";
 import jsImage from "./assets/images/js-badge.svg";
 import dinoImage from "./assets/images/dno1.png";
 
-// importing a function I wrote in my business logic file to my userInterface logic file
-import { DinoService } from "./dino-service.js";
+// importing DinoService class already written in me business logic fileimport { DinoService } from "./dino-service.js";
 
+
+// a function for clearing all fields(the DOM) anytime user wants to search for dinosaurs
+function clearFields() {
+    $("#numParagraphs").val("");
+    $("#numWords").val("");
+    $(".error").text("");
+    $(".dOne").text("");
+    $(".dTwo").text("");
+    $(".dThree").text("");
+    $(".dFour").text("");
+}
 
 $(document).ready(() => {
 
@@ -37,10 +47,12 @@ $(document).ready(() => {
         // getting the number of dinosaur paragraph user wants
         let noOfDinosaursParagraph = $("#numParagraphs").val();
         // clearing this input fields after submitting 
-        $("#numParagraphs").val("");
+        $("#numParagraphs").val("")
 
         let noOfDinosaursNames = $("#numWords").val();
-        $("#numWords").val("");
+       
+        // calling a function for clearing fields everytime me users search for Dinosaurs
+        clearFields();
 
         // writing a function that gets executed when I have a successful response
 
