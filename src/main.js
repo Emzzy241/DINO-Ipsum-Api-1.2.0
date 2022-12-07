@@ -12,6 +12,7 @@ import jsImage from "./assets/images/js-badge.svg";
 import dinoImage from "./assets/images/dno1.png";
 
 // importing DinoService class already written in me business logic fileimport { DinoService } from "./dino-service.js";
+import { DinoService } from "./dino-service.js";
 
 
 // a function for clearing all fields(the DOM) anytime user wants to search for dinosaurs
